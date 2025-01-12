@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\User;
 use App\Models\UserAddress;
 use Illuminate\Database\Seeder;
@@ -18,22 +17,37 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'ibrahim',
                 'email' => 'ibrahim.essam@waffarha.com',
-                'password' => bcrypt('123456789')
+                'password' => bcrypt('123456789'),
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'name' => 'ahmed',
                 'email' => 'ahmed.essam@waffarha.com',
-                'password' => bcrypt('123456789')
+                'password' => bcrypt('123456789'),
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'name' => 'nada',
                 'email' => 'nada.essam@waffarha.com',
-                'password' => bcrypt('123456789')
+                'password' => bcrypt('123456789'),
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'name' => 'gory',
                 'email' => 'gory.essam@waffarha.com',
-                'password' => bcrypt('123456789')
+                'password' => bcrypt('123456789'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'youmna',
+                'email' => 'youmna.ibrahim@waffarha.com',
+                'password' => bcrypt('123456789'),
+                'created_at' => now(),
+                'updated_at' => now(),
             ]
         ]);
 
@@ -41,22 +55,30 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => 'cairo',
                 'street' => '503',
-                'user_id' => 1
+                'user_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'name' => 'giza',
                 'street' => '125',
-                'user_id' => 2
+                'user_id' => 2,
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'name' => 'zamalek',
                 'street' => '59',
-                'user_id' => 3
+                'user_id' => 3,
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'name' => 'sohag',
                 'street' => '15',
-                'user_id' => 4
+                'user_id' => 4,
+                'created_at' => now(),
+                'updated_at' => now(),
             ]
         ]);
     }
