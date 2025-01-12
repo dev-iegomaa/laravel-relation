@@ -25,4 +25,11 @@ Route::prefix('relation')->group(function () {
         Route::get('visible', [AppearanceController::class, 'visible']);
         Route::get('hidden', [AppearanceController::class, 'hidden']);
     });
+
+    Route::prefix('condition')->group(function () {
+        Route::get('for-sub-relation', [RelationController::class, 'conditionForRelation']);
+        Route::get('where-has', [RelationController::class, 'conditionWhereHas']);
+        Route::get('where-doesnt-have', [RelationController::class, 'conditionWhereDoesntHave']);
+        Route::get('where-date', [RelationController::class, 'conditionWhereDateForRelation']);
+    });
 });
