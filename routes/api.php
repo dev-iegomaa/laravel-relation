@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AppearanceController;
 use App\Http\Controllers\RelationController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,5 +19,10 @@ Route::prefix('relation')->group(function () {
     Route::prefix('has-one')->group(function () {
         Route::get('/', [RelationController::class, 'hasOne']);
         Route::get('reverse', [RelationController::class, 'hasOneReverse']);
+    });
+
+    Route::prefix('appearance')->group(function () {
+        Route::get('visible', [AppearanceController::class, 'visible']);
+        Route::get('hidden', [AppearanceController::class, 'hidden']);
     });
 });

@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\User;
+use App\Models\UserAddress;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,11 +14,50 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        User::insert([
+            [
+                'name' => 'ibrahim',
+                'email' => 'ibrahim.essam@waffarha.com',
+                'password' => bcrypt('123456789')
+            ],
+            [
+                'name' => 'ahmed',
+                'email' => 'ahmed.essam@waffarha.com',
+                'password' => bcrypt('123456789')
+            ],
+            [
+                'name' => 'nada',
+                'email' => 'nada.essam@waffarha.com',
+                'password' => bcrypt('123456789')
+            ],
+            [
+                'name' => 'gory',
+                'email' => 'gory.essam@waffarha.com',
+                'password' => bcrypt('123456789')
+            ]
+        ]);
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        UserAddress::insert([
+            [
+                'name' => 'cairo',
+                'street' => '503',
+                'user_id' => 1
+            ],
+            [
+                'name' => 'giza',
+                'street' => '125',
+                'user_id' => 2
+            ],
+            [
+                'name' => 'zamalek',
+                'street' => '59',
+                'user_id' => 3
+            ],
+            [
+                'name' => 'sohag',
+                'street' => '15',
+                'user_id' => 4
+            ]
+        ]);
     }
 }
