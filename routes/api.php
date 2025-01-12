@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\RelationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::prefix('relation')->group(function () {
+    Route::prefix('has-one')->group(function () {
+        Route::get('/', [RelationController::class, 'hasOne']);
+        Route::get('reverse', [RelationController::class, 'hasOneReverse']);
+    });
 });
